@@ -9,11 +9,19 @@
             td.GPU_CORE, td.GEFORCE {text-align:left;}
             td.RADEON {text-align:left;}
             td.CU_COUNT, td.BUS_WIDTH, td.INF_C, td.VRAM, td.TBP {text-align:right;}
+            .scroll table{width:100%;}
+            .scroll{overflow: auto;/*tableをスクロールさせる*/ white-space: nowrap;/*tableのセル内にある文字の折り返しを禁止*/}
+            .scroll::-webkit-scrollbar{　　/*tableにスクロールバーを追加*/ height: 5px;}
+            .scroll::-webkit-scrollbar-track{　　/*tableにスクロールバーを追加*/ background: #F1F1F1;}
+            .scroll::-webkit-scrollbar-thumb {　　/*tableにスクロールバーを追加*/ background: #BCBCBC;}
         </style>
     </head>
 
     <body>
         <h1>Radeon RX 6000シリーズ ラインナップ妄想</h1>
+
+        <span class="scroll">
+
         <table border="1">
             <tr style="background-color:indianred; text-align:center">
                 <th>GPUコア</th>
@@ -136,6 +144,9 @@
                 <td class="GEFORCE">GT  3030 ??</td>
             </tr>
         </table>
+
+        </span>
+
         <br>
         <h2 id="RX67">RX 6700 無印</h2>
         もともと6700XTには<a href="https://northwood.blog.fc2.com/blog-entry-10768.html">「オーバークロック仕様で消費電力230Wの『ASIC A』」と「リファレンス仕様で消費電力189Wの『ASIC B』」の2種類がある</a>、という噂があったが、結局リファレンスモデルがASIC A相当で出てしまったので、「じゃあASIC Bって何だったんだ(# ﾟДﾟ)ｺﾞﾙｧ」と混乱している。<br>
