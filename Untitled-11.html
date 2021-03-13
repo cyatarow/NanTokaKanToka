@@ -9,11 +9,7 @@
             td.GPU_CORE, td.GEFORCE {text-align:left;}
             td.RADEON {text-align:left;}
             td.CU_COUNT, td.BUS_WIDTH, td.INF_C, td.VRAM, td.TBP {text-align:right;}
-            .scroll table{width:100%;}
-            .scroll{overflow: auto;/*tableをスクロールさせる*/ white-space: nowrap;/*tableのセル内にある文字の折り返しを禁止*/}
-            .scroll::-webkit-scrollbar{　　/*tableにスクロールバーを追加*/ height: 5px;}
-            .scroll::-webkit-scrollbar-track{　　/*tableにスクロールバーを追加*/ background: #F1F1F1;}
-            .scroll::-webkit-scrollbar-thumb {　　/*tableにスクロールバーを追加*/ background: #BCBCBC;}
+            .scroll table{display: block; overflow-x: scroll; white-space: nowrap; -webkit-overflow-scrolling: touch;}
         </style>
     </head>
 
@@ -21,170 +17,171 @@
         <h1>Radeon RX 6000シリーズ ラインナップ妄想</h1>
 
         <span class="scroll">
+            <table border="1">
+                <tr style="background-color:indianred; text-align:center">
+                    <th>GPUコア</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th>Inf.C.</th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th>競合GeForce</th>
+                </tr>
 
-        <table border="1">
-            <tr style="background-color:indianred; text-align:center">
-                <th>GPUコア</th>
-                <th>Radeon</th>
-                <th>CU</th>
-                <th>バス幅</th>
-                <th>Inf.C.</th>
-                <th>VRAM</th>
-                <th>TBP</th>
-                <th>競合GeForce</th>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 21 XTX</td>
+                    <td class="RADEON">RX 6900 XT</td>
+                    <td class="CU_COUNT">80</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="INF_C">128 MB</td>
+                    <td style="text-align:right">16 GB</td>
+                    <td style="text-align:right">300 W</td>
+                    <td style="text-align:left">RTX 3090</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 21 XTX</td>
-                <td class="RADEON">RX 6900 XT</td>
-                <td class="CU_COUNT">80</td>
-                <td class="BUS_WIDTH">256-bit</td>
-                <td class="INF_C">128 MB</td>
-                <td style="text-align:right">16 GB</td>
-                <td style="text-align:right">300 W</td>
-                <td style="text-align:left">RTX 3090</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 21 XT</td>
+                    <td class="RADEON">RX 6800 XT</td>
+                    <td class="CU_COUNT">72</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="INF_C">128 MB</td>
+                    <td style="text-align:right">16 GB</td>
+                    <td style="text-align:right">300 W</td>
+                    <td style="text-align:left">RTX 3080</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 21 XT</td>
-                <td class="RADEON">RX 6800 XT</td>
-                <td class="CU_COUNT">72</td>
-                <td class="BUS_WIDTH">256-bit</td>
-                <td class="INF_C">128 MB</td>
-                <td style="text-align:right">16 GB</td>
-                <td style="text-align:right">300 W</td>
-                <td style="text-align:left">RTX 3080</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 21 XL</td>
+                    <td class="RADEON">RX 6800</td>
+                    <td class="CU_COUNT">60</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="INF_C">128 MB</td>
+                    <td style="text-align:right">16 GB</td>
+                    <td style="text-align:right">250 W</td>
+                    <td style="text-align:left">RTX 3070</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 21 XL</td>
-                <td class="RADEON">RX 6800</td>
-                <td class="CU_COUNT">60</td>
-                <td class="BUS_WIDTH">256-bit</td>
-                <td class="INF_C">128 MB</td>
-                <td style="text-align:right">16 GB</td>
-                <td style="text-align:right">250 W</td>
-                <td style="text-align:left">RTX 3070</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 22 XT</td>
+                    <td class="RADEON">RX 6700 XT</td>
+                    <td class="CU_COUNT">40</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">96 MB</td>
+                    <td style="text-align:right">12 GB</td>
+                    <td style="text-align:right">230 W</td>
+                    <td style="text-align:left">RTX 3060 Ti</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 22 XT</td>
-                <td class="RADEON">RX 6700 XT</td>
-                <td class="CU_COUNT">40</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">96 MB</td>
-                <td style="text-align:right">12 GB</td>
-                <td style="text-align:right">230 W</td>
-                <td style="text-align:left">RTX 3060 Ti</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">ここまで</td>
+                    <td class="RADEON">登場済</td>
+                    <td class="CU_COUNT"></td>
+                    <td class="BUS_WIDTH"></td>
+                    <td class="INF_C"></td>
+                    <td style="text-align:right"></td>
+                    <td style="text-align:right"></td>
+                    <td style="text-align:left"></td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">ここまで</td>
-                <td class="RADEON">登場済</td>
-                <td class="CU_COUNT"></td>
-                <td class="BUS_WIDTH"></td>
-                <td class="INF_C"></td>
-                <td style="text-align:right"></td>
-                <td style="text-align:right"></td>
-                <td style="text-align:left"></td>
-            </tr>
+                <tr>
+                    <td class="RADEON">Navi 22 XL</td>
+                    <td class="RADEON">RX 6700</td>
+                    <td class="CU_COUNT">36</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">96 MB</td>
+                    <td style="text-align:right">12 GB</td>
+                    <td style="text-align:right">190 W</td>
+                    <td style="text-align:left">RTX 3060</td>
+                </tr>
 
-            <tr>
-                <td class="RADEON">Navi 22 XL</td>
-                <td class="RADEON">RX 6700</td>
-                <td class="CU_COUNT">36</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">96 MB</td>
-                <td style="text-align:right">12 GB</td>
-                <td style="text-align:right">190 W</td>
-                <td style="text-align:left">RTX 3060</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 22 XE</td>
+                    <td class="RADEON">RX 6600 ??</td>
+                    <td class="CU_COUNT">32</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="INF_C">64 MB</td>
+                    <td style="text-align:right">8 GB</td>
+                    <td style="text-align:right">150 W</td>
+                    <td style="text-align:left">RTX 3050 Ti</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 22 XE</td>
-                <td class="RADEON">RX 6600 ??</td>
-                <td class="CU_COUNT">32</td>
-                <td class="BUS_WIDTH">128-bit</td>
-                <td class="INF_C">64 MB</td>
-                <td style="text-align:right">8 GB</td>
-                <td style="text-align:right">150 W</td>
-                <td style="text-align:left">RTX 3050 Ti</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 23 ??</td>
+                    <td class="RADEON">RX 6500 ??</td>
+                    <td class="CU_COUNT">24</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="INF_C">32 MB</td>
+                    <td style="text-align:right">8 GB</td>
+                    <td style="text-align:right">100 W</td>
+                    <td style="text-align:left">RTX 3050</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 23 ??</td>
-                <td class="RADEON">RX 6500 ??</td>
-                <td class="CU_COUNT">24</td>
-                <td class="BUS_WIDTH">128-bit</td>
-                <td class="INF_C">32 MB</td>
-                <td style="text-align:right">8 GB</td>
-                <td style="text-align:right">100 W</td>
-                <td style="text-align:left">RTX 3050</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 23 ??</td>
+                    <td class="RADEON">RX 6400 ??</td>
+                    <td class="CU_COUNT">22</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="INF_C">32 MB</td>
+                    <td style="text-align:right">8 GB</td>
+                    <td style="text-align:right">75 W</td>
+                    <td class="GEFORCE">RTX 3040 ??</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 23 ??</td>
-                <td class="RADEON">RX 6400 ??</td>
-                <td class="CU_COUNT">22</td>
-                <td class="BUS_WIDTH">128-bit</td>
-                <td class="INF_C">32 MB</td>
-                <td style="text-align:right">8 GB</td>
-                <td style="text-align:right">75 W</td>
-                <td class="GEFORCE">RTX 3040 ??</td>
-            </tr>
-
-            <tr>
-                <td class="GPU_CORE">Navi 24 ??</td>
-                <td class="RADEON">RX 6300 ??</td>
-                <td class="CU_COUNT">12</td>
-                <td class="BUS_WIDTH">96-bit</td>
-                <td class="INF_C">?</td>
-                <td style="text-align:right">4 GB</td>
-                <td style="text-align:right">50 W</td>
-                <td class="GEFORCE">GT  3030 ??</td>
-            </tr>
-        </table>
-
+                <tr>
+                    <td class="GPU_CORE">Navi 24 ??</td>
+                    <td class="RADEON">RX 6300 ??</td>
+                    <td class="CU_COUNT">12</td>
+                    <td class="BUS_WIDTH">96-bit</td>
+                    <td class="INF_C">?</td>
+                    <td style="text-align:right">4 GB</td>
+                    <td style="text-align:right">50 W</td>
+                    <td class="GEFORCE">GT  3030 ??</td>
+                </tr>
+            </table>
         </span>
 
         <br>
         <h2 id="RX67">RX 6700 無印</h2>
         もともと6700XTには<a href="https://northwood.blog.fc2.com/blog-entry-10768.html">「オーバークロック仕様で消費電力230Wの『ASIC A』」と「リファレンス仕様で消費電力189Wの『ASIC B』」の2種類がある</a>、という噂があったが、結局リファレンスモデルがASIC A相当で出てしまったので、「じゃあASIC Bって何だったんだ(# ﾟДﾟ)ｺﾞﾙｧ」と混乱している。<br>
         それで、「もしや6700無印がASIC Bなのか?」と考えた。以下、ASIC Bの仕様を持ってくる案と、(ASIC AだのBだのという噂は全部デタラメという前提で)前世代の5700無印の仕様を踏襲する案を記す。<br>
-        <table border="1">
-            <tr style="background-color:indianred; text-align:center">
-                <th>案</th>
-                <th>Radeon</th>
-                <th>CU</th>
-                <th>バス幅</th>
-                <th>Inf.C.</th>
-                <th>VRAM</th>
-                <th>TBP</th>
-                <th>競合GeForce</th>
-            </tr>
 
-            <tr>
-                <td class="GPU_CORE">ASIC B</td>
-                <td class="RADEON">RX 6700</td>
-                <td class="CU_COUNT">40</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">96 MB</td>
-                <td class="VRAM">12 GB</td>
-                <td class="TBP">190 W</td>
-                <td class="GEFORCE">RTX 3060</td>
-            </tr>
+        <span class="scroll">
+            <table border="1">
+                <tr style="background-color:indianred; text-align:center">
+                    <th>案</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th>Inf.C.</th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th>競合GeForce</th>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">5700踏襲</td>
-                <td class="RADEON">RX 6700</td>
-                <td class="CU_COUNT">36</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">96 MB</td>
-                <td class="VRAM">12 GB</td>
-                <td class="TBP">180 W</td>
-                <td class="GEFORCE">RTX 3060</td>
-            </tr>
-        </table>
+                <tr>
+                    <td class="GPU_CORE">ASIC B</td>
+                    <td class="RADEON">RX 6700</td>
+                    <td class="CU_COUNT">40</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">96 MB</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">190 W</td>
+                    <td class="GEFORCE">RTX 3060</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CORE">5700踏襲</td>
+                    <td class="RADEON">RX 6700</td>
+                    <td class="CU_COUNT">36</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">96 MB</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">180 W</td>
+                    <td class="GEFORCE">RTX 3060</td>
+                </tr>
+            </table>
+        </span>
         ただ、ASIC B案だと、6700XTとの差別化がクロック周波数と消費電力以外できないということになり、商品展開がやりにくくなる。(差別化云々は下記6600の項目を参照)<br>
         <br>
         ところで、<i>6700無印のVRAMが6GBになるとかいうリーク、実現なんかしたらダメだぞ</i><br>
@@ -203,87 +200,93 @@
         5000シリーズの仕様を踏襲するならば、6700と同じNavi 22になりそうだが、5000シリーズのときは5700無印と5600XTの実性能が近かった(CU数に至っては全く同じ36基)ため、差別化がうまくできず、5700無印の存在意義を潰してしまっていた。<br>
         (とはいえ、5600XT自体がRTX2060Superへの対抗策として出されたという経緯があるので、仕方ないところもある)<br>
         ちなみに、OEM限定の5600無印は32CUであり、同XTよりも削られているので、Navi 22のまま差別化するとしたらこのあたりが最適か。<br>
-        <table border="1">
-            <tr style="background-color:indianred; text-align:center">
-                <th>案</th>
-                <th>Radeon</th>
-                <th>CU</th>
-                <th>バス幅</th>
-                <th>Inf.C.</th>
-                <th>VRAM</th>
-                <th>TBP</th>
-                <th>競合GeForce</th>
-            </tr>
 
-            <tr>
-                <td class="GPU_CORE">N22・WQHD</td>
-                <td class="RADEON">RX 6600</td>
-                <td class="CU_COUNT">32</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">96 MB</td>
-                <td class="VRAM">12 GB</td>
-                <td class="TBP">150 W</td>
-                <td class="GEFORCE">RTX 3050 Ti</td>
-            </tr>
+        <span class="scroll">
+            <table border="1">
+                <tr style="background-color:indianred; text-align:center">
+                    <th>案</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th>Inf.C.</th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th>競合GeForce</th>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">N23・フルHD</td>
-                <td class="RADEON">RX 6600</td>
-                <td class="CU_COUNT">24</td>
-                <td class="BUS_WIDTH">128-bit</td>
-                <td class="INF_C">32 MB</td>
-                <td class="VRAM">8 GB</td>
-                <td class="TBP">140 W</td>
-                <td class="GEFORCE">RTX 3050 Ti</td>
-            </tr>
-        </table>
+                <tr>
+                    <td class="GPU_CORE">N22・WQHD</td>
+                    <td class="RADEON">RX 6600</td>
+                    <td class="CU_COUNT">32</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">96 MB</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">150 W</td>
+                    <td class="GEFORCE">RTX 3050 Ti</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CORE">N23・フルHD</td>
+                    <td class="RADEON">RX 6600</td>
+                    <td class="CU_COUNT">24</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="INF_C">32 MB</td>
+                    <td class="VRAM">8 GB</td>
+                    <td class="TBP">140 W</td>
+                    <td class="GEFORCE">RTX 3050 Ti</td>
+                </tr>
+            </table>
+        </span>
         (Navi 23のInfinity Cacheが64MBではなく32MBなのは<a href="https://www.coelacanth-dream.com/posts/2021/03/04/dimgrey_cavefish-4mb-mall-per-ch/">こちらを参照</a>)<br>
         <br>
-        <table border="1">
-            <tr style="background-color:indianred; text-align:center">
-                <th>(参考)</th>
-                <th>Radeon</th>
-                <th>CU</th>
-                <th>バス幅</th>
-                <th>Inf.C.</th>
-                <th>VRAM</th>
-                <th>TBP</th>
-                <th>競合GeForce</th>
-            </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 10 XL</td>
-                <td class="RADEON">RX 5700</td>
-                <td class="CU_COUNT">36</td>
-                <td class="BUS_WIDTH">256-bit</td>
-                <td class="INF_C">なし</td>
-                <td class="VRAM">8 GB</td>
-                <td class="TBP">180 W</td>
-                <td class="GEFORCE">RTX 2060(S)</td>
-            </tr>
+        <span class="scroll">
+            <table border="1">
+                <tr style="background-color:indianred; text-align:center">
+                    <th>(参考)</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th>Inf.C.</th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th>競合GeForce</th>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 10 XLE</td>
-                <td class="RADEON">RX 5600 XT</td>
-                <td class="CU_COUNT">36</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">なし</td>
-                <td class="VRAM">6 GB</td>
-                <td class="TBP">160 W</td>
-                <td class="GEFORCE">RTX 2060(S)</td>
-            </tr>
+                <tr>
+                    <td class="GPU_CORE">Navi 10 XL</td>
+                    <td class="RADEON">RX 5700</td>
+                    <td class="CU_COUNT">36</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="INF_C">なし</td>
+                    <td class="VRAM">8 GB</td>
+                    <td class="TBP">180 W</td>
+                    <td class="GEFORCE">RTX 2060(S)</td>
+                </tr>
 
-            <tr>
-                <td class="GPU_CORE">Navi 10 XE</td>
-                <td class="RADEON">RX 5600</td>
-                <td class="CU_COUNT">32</td>
-                <td class="BUS_WIDTH">192-bit</td>
-                <td class="INF_C">なし</td>
-                <td class="VRAM">6 GB</td>
-                <td class="TBP">150 W</td>
-                <td class="GEFORCE">?</td>
-            </tr>
-        </table>
+                <tr>
+                    <td class="GPU_CORE">Navi 10 XLE</td>
+                    <td class="RADEON">RX 5600 XT</td>
+                    <td class="CU_COUNT">36</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">なし</td>
+                    <td class="VRAM">6 GB</td>
+                    <td class="TBP">160 W</td>
+                    <td class="GEFORCE">RTX 2060(S)</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CORE">Navi 10 XE</td>
+                    <td class="RADEON">RX 5600</td>
+                    <td class="CU_COUNT">32</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="INF_C">なし</td>
+                    <td class="VRAM">6 GB</td>
+                    <td class="TBP">150 W</td>
+                    <td class="GEFORCE">?</td>
+                </tr>
+            </table>
+        </span>
         <br>
 
         <h2 id="RX65">RX 6500 (XT? 無印?)</h2>
