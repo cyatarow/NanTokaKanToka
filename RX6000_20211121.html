@@ -260,7 +260,11 @@
             推測に推測を重ねるが、6700無印の発売中止の理由として、自分なりに考えた。<br>
 
             <ul>
-                <li>RX6000シリーズの開発当初は、6700無印をちゃんと作るつもりでいたのだが、昨今の半導体不足により、RDNA2の製造量が限られてしまった。<br>状況が状況なだけに、AMDはラインナップの計画を変更しなければならなくなり、「ノートPCの需要をないがしろにするわけにはいかない。デスクトップ向けとノート向けの両立ができるように、ラインナップを妥協するべき」という結論に至った。<br>その結果、6700無印の計画は中止となり、本来それに使う予定だったNavi 22のカットダウン版チップ(36CU)を6700Mに回した。</li>
+                <li>
+                    RX6000シリーズの開発当初は、6700無印をちゃんと作るつもりでいたのだが、昨今の半導体不足により、RDNA2の製造量が限られてしまった。<br>
+                    状況が状況なだけに、AMDはラインナップの計画を変更しなければならなくなり、「ノートPCの需要をないがしろにするわけにはいかない。デスクトップ向けとノート向けの両立ができるように、ラインナップを妥協するべき」という結論に至った。<br>
+                    その結果、6700無印の計画は中止となり、本来それに使う予定だったNavi 22のカットダウン版チップ(36CU)を6700Mに回した。
+                </li>
             </ul>
 
             さらに、6月下旬には、AMDの公式ドライバ内に<a href="https://northwood.blog.fc2.com/blog-entry-10975.html">RX 6600 無印・XTの記述が見つかった</a>と報じられたものの、逆に6700無印が全く写っていないことも、発売中止の疑惑に拍車をかけることになった。<small>それにしては、公式発表済みの6700Mの記述もないのが変だが(6800M・6600Mはある)</small><br>
@@ -279,8 +283,6 @@
             6800Mは6700XTのスペックを踏襲しているが、6700Mは同じNavi 22であるにもかかわらず、CU数だけでなくInfinity Cache・VRAMまで減らされている。(それぞれ80MB・10GB、おそらくバス幅も160-bitだろう)<br>
             ノート向けとはいえ、このような数字は過去のリークに現れておらず、ちょっと謎である。<br>
         </details>
-
-        
 
         <span class="scroll">
             開発中止でない場合の想定スペック
@@ -313,6 +315,7 @@
                 </tr>
             </table>
         </span>
+        結局、Navi 22を採用したデスクトップ向けグラボは、RX 6700 XT唯一つということになってしまった。Navi 22版Radeon PROも用意されていない。<br>
 
         <h2 id="RX66">RX 6600 無印</h2>
         もともと6600無印は、<a href="https://northwood.blog.fc2.com/blog-entry-11003.html">同XTと同時に、8月11日に発売される</a>と報じられていたが、その直後、<a href="https://northwood.blog.fc2.com/blog-entry-11005.html">無印の発売は9月以降に延期される</a>という、前述の内容を否定する噂が出現した。<br>
@@ -329,31 +332,33 @@
         だがNVIDIAがデスクトップ向けに3050Tiを解禁していないせいで、仕方なく3060と戦うハメになったのだろう。<br>
         <br>
         なお、同じNavi 23のカットダウンチップを採用する製品としては、すでにRadeon Pro W6600が登場済みであり、スペックもだいぶ似通っている。<br>
-        <table border="1">
-            <tr class="HEADER_PRO">
-                <th colspan="2">GPUコア</th>
-                <th>Radeon</th>
-                <th>CU</th>
-                <th>バス幅</th>
-                <th>Inf.C.</th>
-                <th>VRAM</th>
-                <th>TBP</th>
-                <th>競合</th>
-            </tr>
-
-            <tr>
-                <td class="GPU_CORE" style="background-color: #8f8;" rowspan="1">Navi 23</td>
-                <td class="GPU_CORE_2" style="background-color: #8f8;">XL?</td>
-                <td class="RADEON">Pro W6600</td>
-                <td class="CU_COUNT">28</td>
-                <td class="BUS_WIDTH">128-bit</td>
-                <td class="INF_C">32 MB</td>
-                <td class="VRAM">8 GB</td>
-                <td class="TBP">130 W</td>
-                <td class="GEFORCE">?</td>
-            </tr>
-
-        </table>
+        <span class="scroll">
+            <table border="1">
+                <tr class="HEADER_PRO">
+                    <th colspan="2">GPUコア</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th>Inf.C.</th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th>競合</th>
+                </tr>
+    
+                <tr>
+                    <td class="GPU_CORE" style="background-color: #8f8;" rowspan="1">Navi 23</td>
+                    <td class="GPU_CORE_2" style="background-color: #8f8;">XL?</td>
+                    <td class="RADEON">Pro W6600</td>
+                    <td class="CU_COUNT">28</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="INF_C">32 MB</td>
+                    <td class="VRAM">8 GB</td>
+                    <td class="TBP">130 W</td>
+                    <td class="GEFORCE">?</td>
+                </tr>
+            </table>
+        </span>
+        
         <br>
 
         <h2 id="RX65">RX 6500 XT・RX 6400</h2>
@@ -395,7 +400,7 @@
         <a href="https://northwood.blog.fc2.com/blog-entry-11125.html">https://northwood.blog.fc2.com/blog-entry-11125.html</a><br>
         同氏は、Navi 24のTBPが最大で<b>120W</b>に達すると伝えている。<br>
         Navi 24のようなGPU規模で通常想定されるのは、75W以下の低消費電力のはずだが、どういうわけかNavi 24は100Wを超えてしまっている。<br>
-        こうなった理由としては、今後出るであろうRTX 3050 Tiや、Intel Arcに対して競争力をつけるためらしいが・・・<br>
+        こうなった理由としては、今後出るであろうRTX 3050 Tiや、Intel ARCに対して競争力をつけるためらしいが・・・<br>
         <br>
         5000シリーズのときも、5500XTどころかそれよりも下の5300(OEM限定)ですら100W必要だった。AMDが補助電源なしグラボの開発に対してやたら消極的なのは、一体何なのか?<br>
         <i>(はっきり言って、デマであってほしい。ローエンドの製品にそこまでの性能や競争力が必要とはとても思えない。)</i>
@@ -409,14 +414,14 @@
             <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">N24っぽい？ｲｲﾈ!</p>&mdash; 遠坂小町@Komachi (@KOMACHI_ENSAKA) <a href="https://twitter.com/KOMACHI_ENSAKA/status/1461965248450158592?ref_src=twsrc%5Etfw">November 20, 2021</a></blockquote>
             <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">型番までリストされてるわけだし、まあ多分出る。いつ出るかは知らないけれど。</p>&mdash; 遠坂小町@Komachi (@KOMACHI_ENSAKA) <a href="https://twitter.com/KOMACHI_ENSAKA/status/1461967160079618052">November 20, 2021</a></blockquote>
         </span>
-        ついに、ついに6600無印よりも下の製品名の情報が出現した。<br>
+        ついに、ついに6600無印より下の製品名の情報が出現した。<br>
         情報源は明かされていないが、ツイートから得られる情報は以下の通り。
         <ul>
             <li>製品名は<b>「RX 6500 XT」と「RX 6400」の2つ</b></li>
             <li>VRAMは<b>4GB GDDR6</b></li>
             <li>使われるGPUチップは<b>Navi 24</b></li>
         </ul>
-        以上の情報をまとめると、現時点で想定されるラインナップはこのようになる。
+        以上の情報をまとめると、今のところ推測されるラインナップはこんなところか。
                 <span class="scroll">
                     <table border="1">
                         <tr class="HEADER">
