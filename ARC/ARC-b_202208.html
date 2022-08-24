@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <title>
+            Intel Arc Bシリーズ デスクトップ向けラインナップ妄想 2022年8月版 | u/cyatarow
+        </title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <style>
+            tr.HEADER {background-color:#4af; text-align:center;}
+            td.EU_COUNT, td.SHADER_COUNT, td.BUS_WIDTH, td.CACHE, td.VRAM, td.TBP, td.MSRP, td.FAIR_PRICE {text-align:right;}
+            .scroll {display: block; overflow-x: scroll; white-space: nowrap; border:solid 1px #000000;}
+        </style>
+    </head>
+
+    <body style="font-family: 'Rubik', sans-serif;">
+        <h1>Intel Arc Bシリーズ デスクトップ向けラインナップ妄想 2022年8月版<br><small><a href="https://www.reddit.com/user/cyatarow">u/cyatarow</a></small></h1>
+        2022-08-24: 初版。まだArc Bシリーズ(Battlemage, Xe2-HPG)のラインナップどころか、ハードウェアスペックの噂すらない状況だが、とりあえず作成。<br>
+        AシリーズがCore iみたく「A7(A700番台)」「A5(A500番台)」「A3(A300番台)」とグレード分けされていたので、GeForceやRadeonのハイエンドと戦えるようになるBシリーズでは、おそらく「B9(B900番台)」が出てくると予想。<br>
+        <span class="scroll">
+            ◆パターンA: 「控えめ」な予想 (RX 6000シリーズとほぼ同規模のシェーダー数を想定)
+            <table border="1">
+                <tr class="HEADER">
+                    <th colspan="2">GPUチップ</th>
+                    <th>Arc</th>
+                    <th>EU数</th>
+                    <th><small>シェーダー数</small></th>
+                    <th>バス幅</th>
+                    <th>Cache?</th>
+                    <th>VRAM</th>
+                    <th>消費電力</th>
+                    <th><small>MSRP<br>(四捨五入)</small></th>
+                    <th><small>性能から見た<br>適正価格(税込)</small></th>
+                    <th>競合GeForce</th>
+                    <th>競合Radeon</th>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="color: #fff; background-color: #c0f;" rowspan="2">BTM-G10</td>
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #c0f;"><small>フルスペック 48-Xeコア</small></td>
+                    <td class="ARC" style="color: #c0f;">B970</td>
+                    <td class="EU_COUNT">768</td>
+                    <td class="SHADER_COUNT">6144</td>
+                    <td class="BUS_WIDTH" rowspan="2">256-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">16 GB</td>
+                    <td class="TBP">250 W</td>
+                    <td class="MSRP">$ 1000</td>
+                    <td class="FAIR_PRICE">130000 円</td>
+                    <td class="GEFORCE">RTX 4080 Ti</td>
+                    <td class="RADEON">RX 7800 XT</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #c0f;"><small>カットダウン 40-Xeコア</small></td>
+                    <td class="ARC" style="color: #c0f;">B930</td>
+                    <td class="EU_COUNT">640</td>
+                    <td class="SHADER_COUNT">5120</td>
+                    <!---->
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">16 GB</td>
+                    <td class="TBP">215 W</td>
+                    <td class="MSRP">$ 800</td>
+                    <td class="FAIR_PRICE">100000 円</td>
+                    <td class="GEFORCE">RTX 4080 無印</td>
+                    <td class="RADEON">RX 7800 無印</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="color: #fff; background-color: #00f;" rowspan="3">BTM-G11</td>
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #00f;"><small>フルスペック 32-Xeコア</small></td>
+                    <td class="ARC" style="color: #00f;">B770</td>
+                    <td class="EU_COUNT">512</td>
+                    <td class="SHADER_COUNT">4096</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">180 W</td>
+                    <td class="MSRP">$ 600</td>
+                    <td class="FAIR_PRICE">80000 円</td>
+                    <td class="GEFORCE">RTX 4070</td>
+                    <td class="RADEON">RX 7700(XT/無印)</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #00f;"><small>カットダウン 24-Xeコア</small></td>
+                    <td class="ARC" style="color: #00f;">B730</td>
+                    <td class="EU_COUNT">384</td>
+                    <td class="SHADER_COUNT">3072</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">150 W</td>
+                    <td class="MSRP">$ 450</td>
+                    <td class="FAIR_PRICE">60000 円</td>
+                    <td class="GEFORCE">RTX 4060 Ti</td>
+                    <td class="RADEON">RX 7600 XT</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #06f;"><small>カットダウン 16-Xeコア</small></td>
+                    <td class="ARC" style="color: #06f;">B570</td>
+                    <td class="EU_COUNT">256</td>
+                    <td class="SHADER_COUNT">2048</td>
+                    <td class="BUS_WIDTH">160-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">10 GB</td>
+                    <td class="TBP">120 W</td>
+                    <td class="MSRP">$ 300</td>
+                    <td class="FAIR_PRICE">40000 円</td>
+                    <td class="GEFORCE">RTX 4060 無印</td>
+                    <td class="RADEON">RX 7600 無印</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="background-color: #0cf;" rowspan="2">BTM-G12</td>
+                    <td class="GPU_CHIP_2" style="background-color: #0cf;"><small>フルスペック 8-Xeコア</small></td>
+                    <td class="ARC" style="color: #0cf;">B370</td>
+                    <td class="EU_COUNT">128</td>
+                    <td class="SHADER_COUNT">1028</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">8 GB</td>
+                    <td class="TBP">75 W</td>
+                    <td class="MSRP">$ 200</td>
+                    <td class="FAIR_PRICE">25000 円</td>
+                    <td class="GEFORCE">RTX 4050</i></td>
+                    <td class="RADEON">RX 7500(XT/無印)</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="background-color: #0cf;"><small>カットダウン 4-Xeコア</small></td>
+                    <td class="ARC" style="color: #0cf;">B330</td>
+                    <td class="EU_COUNT">64</td>
+                    <td class="SHADER_COUNT">512</td>
+                    <td class="BUS_WIDTH">96-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">6 GB</td>
+                    <td class="TBP">45 W</td>
+                    <td class="MSRP">$ 100</td>
+                    <td class="FAIR_PRICE">12000 円</td>
+                    <td class="GEFORCE">RTX 4040</i></td>
+                    <td class="RADEON">RX 7400(XT/無印)</small></i></td>
+                </tr>
+            </table>
+        </span>
+        <br>
+        <span class="scroll">
+            ◆パターンB: 「盛り気味」な予想 (RX 7000シリーズや、近年のGeForceに追従してシェーダー数を大幅増加)
+            <table border="1">
+                <tr class="HEADER">
+                    <th colspan="2">GPUチップ</th>
+                    <th>Arc</th>
+                    <th>EU数</th>
+                    <th><small>シェーダー数</small></th>
+                    <th>バス幅</th>
+                    <th>Cache?</th>
+                    <th>VRAM</th>
+                    <th>消費電力</th>
+                    <th><small>MSRP<br>(四捨五入)</small></th>
+                    <th><small>性能から見た<br>適正価格(税込)</small></th>
+                    <th>競合GeForce</th>
+                    <th>競合Radeon</th>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="color: #fff; background-color: #c0f;" rowspan="2">BTM-G10</td>
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #c0f;"><small>フルスペック 80-Xeコア</small></td>
+                    <td class="ARC" style="color: #c0f;">B970</td>
+                    <td class="EU_COUNT">1280</td>
+                    <td class="SHADER_COUNT">10240</td>
+                    <td class="BUS_WIDTH">384-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">24 GB</td>
+                    <td class="TBP">250 W</td>
+                    <td class="MSRP">$ 1000</td>
+                    <td class="FAIR_PRICE">130000 円</td>
+                    <td class="GEFORCE">RTX 4090</td>
+                    <td class="RADEON">RX 7900(XT/無印)</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #c0f;"><small>カットダウン 64-Xeコア</small></td>
+                    <td class="ARC" style="color: #c0f;">B930</td>
+                    <td class="EU_COUNT">1024</td>
+                    <td class="SHADER_COUNT">8192</td>
+                    <td class="BUS_WIDTH">320-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">20 GB</td>
+                    <td class="TBP">215 W</td>
+                    <td class="MSRP">$ 800</td>
+                    <td class="FAIR_PRICE">100000 円</td>
+                    <td class="GEFORCE">RTX 4080(Ti/無印)</td>
+                    <td class="RADEON">RX 7800(XT/無印)</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="color: #fff; background-color: #00f;" rowspan="4">BTM-G11</td>
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #00f;"><small>フルスペック 48-Xeコア</small></td>
+                    <td class="ARC" style="color: #00f;">B770</td>
+                    <td class="EU_COUNT">768</td>
+                    <td class="SHADER_COUNT">6144</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">16 GB</td>
+                    <td class="TBP">180 W</td>
+                    <td class="MSRP">$ 600</td>
+                    <td class="FAIR_PRICE">80000 円</td>
+                    <td class="GEFORCE">RTX 4070 Ti</td>
+                    <td class="RADEON">RX 7700 XT</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #00f;"><small>カットダウン 40-Xeコア</small></td>
+                    <td class="ARC" style="color: #00f;">B730</td>
+                    <td class="EU_COUNT">640</td>
+                    <td class="SHADER_COUNT">5120</td>
+                    <td class="BUS_WIDTH">256-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">16 GB</td>
+                    <td class="TBP">160 W</td>
+                    <td class="MSRP">$ 450</td>
+                    <td class="FAIR_PRICE">60000 円</td>
+                    <td class="GEFORCE">RTX 4070 無印</td>
+                    <td class="RADEON">RX 7700 無印</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #06f;"><small>カットダウン 32-Xeコア</small></td>
+                    <td class="ARC" style="color: #06f;">B570</td>
+                    <td class="EU_COUNT">512</td>
+                    <td class="SHADER_COUNT">4096</td>
+                    <td class="BUS_WIDTH">192-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">12 GB</td>
+                    <td class="TBP">130 W</td>
+                    <td class="MSRP">$ 300</td>
+                    <td class="FAIR_PRICE">40000 円</td>
+                    <td class="GEFORCE">RTX 4060 Ti</td>
+                    <td class="RADEON">RX 7600 XT</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="color: #fff; background-color: #06f;"><small>カットダウン 24-Xeコア</small></td>
+                    <td class="ARC" style="color: #06f;">B530</td>
+                    <td class="EU_COUNT">384</td>
+                    <td class="SHADER_COUNT">3072</td>
+                    <td class="BUS_WIDTH">160-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">10 GB</td>
+                    <td class="TBP">100 W</td>
+                    <td class="MSRP">$ 240</td>
+                    <td class="FAIR_PRICE">32000 円</td>
+                    <td class="GEFORCE">RTX 4060 無印</td>
+                    <td class="RADEON">RX 7600 無印</td>
+                </tr>
+
+                <tr>
+                    <td class="GPU_CHIP" style="background-color: #0cf;" rowspan="2">BTM-G12</td>
+                    <td class="GPU_CHIP_2" style="background-color: #0cf;"><small>フルスペック 16-Xeコア</small></td>
+                    <td class="ARC" style="color: #0cf;">B370</td>
+                    <td class="EU_COUNT">256</td>
+                    <td class="SHADER_COUNT">2048</td>
+                    <td class="BUS_WIDTH">128-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">8 GB</td>
+                    <td class="TBP">75 W</td>
+                    <td class="MSRP">$ 150</td>
+                    <td class="FAIR_PRICE">20000 円</td>
+                    <td class="GEFORCE">RTX 4050(Ti/無印)</i></td>
+                    <td class="RADEON">RX 7500(XT/無印)</td>
+                </tr>
+
+                <tr>
+                    <!---->
+                    <td class="GPU_CHIP_2" style="background-color: #0cf;"><small>カットダウン 4-Xeコア</small></td>
+                    <td class="ARC" style="color: #0cf;">B330</td>
+                    <td class="EU_COUNT">128</td>
+                    <td class="SHADER_COUNT">1024</td>
+                    <td class="BUS_WIDTH">96-bit</td>
+                    <td class="CACHE">-</td>
+                    <td class="VRAM">6 GB</td>
+                    <td class="TBP">45 W</td>
+                    <td class="MSRP">$ 100</td>
+                    <td class="FAIR_PRICE">12000 円</td>
+                    <td class="GEFORCE">RTX 4040(?)</i></td>
+                    <td class="RADEON">RX 7400(?)</small></i></td>
+                </tr>
+            </table>
+        </span>
+        
+    </body>
+</html>
