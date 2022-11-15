@@ -9,8 +9,14 @@
         </title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!--
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Saira+Condensed:wght@400;500;700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Saira+Condensed:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+        -->
+
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=Saira+Condensed:wght@400;500;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=Saira+Condensed:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
 
         <style>
             table {border: 2px #808080 solid; border-spacing: 1px; font-size: 1.1rem;}
@@ -26,7 +32,7 @@
         </style>
     </head>
 
-    <body style="font-family: 'Rubik', sans-serif;">
+    <body style="font-family: 'IBM Plex Sans JP', sans-serif;">
         <span style="text-align: center; font-family: 'Saira Condensed', sans-serif;">
             <div style="font-size: 2.25rem;">AMD Radeon RX 7000 series: The Desktop Lineup Speculation 22.11.b</div>
             <div style="font-size: 1.5rem;">AMD Radeon RX 7000シリーズ デスクトップ向けラインナップ妄想 2022年11月版-b</div>
@@ -404,7 +410,7 @@
                 
                 <tr>
                     <td><a href="https://northwood.blog.fc2.com/blog-entry-10727.html">2021年1月</a></td>
-                    <td>160 CU<snall>(80×2)</snall><br>チップレット</td>
+                    <td>160 CU<small>(80×2)</small><br>チップレット</td>
                     <td>?</td>
                     <td>?</td>
                 </tr>
@@ -418,15 +424,15 @@
 
                 <tr>
                     <td><a href="https://northwood.blog.fc2.com/blog-entry-11009.html">2021年7月</a></td>
-                    <td>120 CU<snall>(60×2)</snall><br>チップレット</td>
+                    <td>120 CU<small>(60×2)</small><br>チップレット</td>
                     <td>? CU×2<br>チップレット</td>
                     <td>? CU<br>モノリシック</td>
                 </tr>
 
                 <tr>
                     <td><a href="https://northwood.blog.fc2.com/blog-entry-11027.html">2021年8月</a></td>
-                    <td>120 CU<snall>(60×2)</snall><br>チップレット</td>
-                    <td>80 CU<snall>(40×2)</snall><br>チップレット</td>
+                    <td>120 CU<small>(60×2)</small><br>チップレット</td>
+                    <td>80 CU<small>(40×2)</small><br>チップレット</td>
                     <td>40 CU<br>モノリシック</td>
                 </tr>
 
@@ -443,37 +449,105 @@
         かといってNavi 33の更に下位のRDNA 3採用チップ（Navi 34?）があるという情報もない。<br>
         そもそも6500 XT～6400に使われたNavi 24自体、<b>本来はノートPC専用のチップにする予定だった</b>のが、<a href="https://gazlog.com/entry/radeon-rx-6500-xt-limited-reason/">（理由は不明ながら）急遽デスクトップ向けへの投入も決まったことが示唆されている</a>。<br>
         RX 7000シリーズでは、もしかしたら<span style="color: #c00;">この価格帯の製品が一切作られない可能性も・・・</span><br>
+
+        <span class="scroll">
+            <table>
+                個人的にはこうなってほしい
+                <tr class="HEADER">
+                    <th class="PREDECESSOR"><small>置き換え対象の<br>先代モデル</small></th>
+                    <th class="PREDECESSOR">→</th>
+                    <th colspan="2">GPUコア</th>
+                    <th>Radeon</th>
+                    <th>CU</th>
+                    <th>バス幅</th>
+                    <th><small>Infinity<br>Cache</small></th>
+                    <th>VRAM</th>
+                    <th>TBP</th>
+                    <th><small>MSRP<br>(四捨五入)</small></th>
+                    <th><small>性能から見た<br>適正価格(税込)※</small></th>
+                    <th>競合GeForce</th>
+                </tr>
+
+                <tr>
+                    <td class="PREDECESSOR">RX 6650/6600 XT</td>
+                    <td class="PREDECESSOR">→</td>
+                    <td class="GPU_CORE" style="background-color: #8f8;" rowspan="3">Navi 33</td>
+                    <td class="GPU_CORE_2" style="background-color: #8f8;">XT</td>
+                    <td class="RADEON">RX 7600 XT</td>
+                    <td class="CU_COUNT">32</td>
+                    <td class="BUS_WIDTH">128</td>
+                    <td class="INF_C">32</td>
+                    <td class="VRAM">8</td>
+                    <td class="TBP">140</td>
+                    <td class="MSRP">340</td>
+                    <td class="FAIR_PRICE">???</td>
+                    <td class="GEFORCE">RTX 4060</td>
+                </tr>
+
+                <tr>
+                    <td class="PREDECESSOR">RX 6600</td>
+                    <td class="PREDECESSOR">→</td>
+                    <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
+                    <td class="GPU_CORE_2" style="background-color: #8f8;">XL</td>
+                    <td class="RADEON">RX 7600</td>
+                    <td class="CU_COUNT">28</td>
+                    <td class="BUS_WIDTH">128</td>
+                    <td class="INF_C">32</td>
+                    <td class="VRAM">8</td>
+                    <td class="TBP">120</td>
+                    <td class="MSRP">280</td>
+                    <td class="FAIR_PRICE">???</td>
+                    <td class="GEFORCE">RTX 4050 <small>Ti/無印</small></td>
+                </tr>
+
+                <tr>
+                    <td class="PREDECESSOR">RX 6500 XT</td>
+                    <td class="PREDECESSOR">→</td>
+                    <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
+                    <td class="GPU_CORE_2" style="background-color: #8f8;">XE</td>
+                    <td class="RADEON">RX 7500</td>
+                    <td class="CU_COUNT">24</td>
+                    <td class="BUS_WIDTH">96</td>
+                    <td class="INF_C">24</td>
+                    <td class="VRAM">6</td>
+                    <td class="TBP">100</td>
+                    <td class="MSRP">200</td>
+                    <td class="FAIR_PRICE">???</td>
+                    <td class="GEFORCE">???</td>
+                </tr>
+            </table>
+        </span>
         
         <!--<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
         <script>
             let class_BUS_WIDTH = document.getElementsByClassName("BUS_WIDTH");
             for (let i = 0; i < class_BUS_WIDTH.length; i++) {
-                class_BUS_WIDTH[i].insertAdjacentHTML('beforeend', '<small>-bit</small>');;  
+                class_BUS_WIDTH[i].insertAdjacentHTML('beforeend', '<small>-bit</small>');
             }
 
             let class_INF_C = document.getElementsByClassName("INF_C");
             for (let i = 0; i < class_INF_C.length; i++) {
-                class_INF_C[i].insertAdjacentHTML('beforeend', '<small>MB</small>');;  
+                class_INF_C[i].insertAdjacentHTML('beforeend', '<small>MB</small>');
             }
 
             let class_VRAM = document.getElementsByClassName("VRAM");
             for (let i = 0; i < class_VRAM.length; i++) {
-                class_VRAM[i].insertAdjacentHTML('beforeend', '<small>GB</small>');;  
+                class_VRAM[i].insertAdjacentHTML('beforeend', '<small>GB</small>');
             }
 
             let class_TBP = document.getElementsByClassName("TBP");
             for (let i = 0; i < class_TBP.length; i++) {
-                class_TBP[i].insertAdjacentHTML('beforeend', '<small>W</small>');;  
+                class_TBP[i].insertAdjacentHTML('beforeend', '<small>W</small>');
             }
 
             let class_MSRP = document.getElementsByClassName("MSRP");
             for (let i = 0; i < class_MSRP.length; i++) {
-                class_MSRP[i].insertAdjacentHTML('afterbegin', '<small>$</small>');;  
+                class_MSRP[i].insertAdjacentHTML('afterbegin', '<small>$</small>');
             }
 
             let class_FAIR_PRICE = document.getElementsByClassName("FAIR_PRICE");
             for (let i = 0; i < class_FAIR_PRICE.length; i++) {
-                class_FAIR_PRICE[i].insertAdjacentHTML('beforeend', '<small>円</small>');;  
+                class_FAIR_PRICE[i].insertAdjacentHTML('beforeend', '<small>円</small>');
             }
         </script>
     </body>
