@@ -25,10 +25,31 @@
             tr.HEADER {background-color:#800; color: white; text-align: center;}
             th.PREDECESSOR {background-color: black;}
             td.CU_COUNT, td.BUS_WIDTH, td.INF_C, td.VRAM, td.TBP, td.MSRP, td.FAIR_PRICE {text-align: right;}
-            .scroll {display: block; overflow-x: scroll; white-space: nowrap; border:solid 3px #a00; padding: 2px;}
+
+            .scroll{
+                display: block;
+                overflow-x: scroll;
+                white-space: nowrap;
+                border:solid 3px #a00;
+                padding: 2px;
+            }
 
             table.GPU_timeline tr td:nth-child(1) {text-align: right;}
             table.GPU_timeline tr td:nth-child(n+2) {text-align: center;}
+
+            .guage{
+                border: 1px solid #888;
+                background: #444;
+                width: 50px;
+                margin: 0;
+            }
+            .guage>div{
+                height: 10px;
+            }
+
+            details{
+                border: 1px solid #000;
+            }
         </style>
     </head>
 
@@ -54,12 +75,10 @@
         </ul>
 
         <span class="scroll">
-            正式発表済み:
             <table>
                 <tr class="HEADER">
-                    <th class="PREDECESSOR"><small>置き換え対象の<br>先代モデル</small></th>
-                    <th class="PREDECESSOR">→</th>
-                    <th colspan="2">GPUコア</th>
+                    <th class="PREDECESSOR" colspan="2"><small>置き換え対象の<br>先代モデル</small></th>
+                    <th colspan="2">GPUチップ</th>
                     <th>Radeon</th>
                     <th>CU</th>
                     <th>バス幅</th>
@@ -72,165 +91,154 @@
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6950 XT</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td colspan="99">▼正式発表済み</td>
+                </tr>
+
+                <tr>
+                    <td class="PREDECESSOR">6950 XT</td>
+                    <td>→</td>
                     <td class="GPU_CORE" style="background-color: #f88;" rowspan="2">Navi 31</td>
                     <td class="GPU_CORE_2" style="background-color: #f88;">XTX</td>
-                    <td class="RADEON">RX 7900 XTX</td>
-                    <td class="CU_COUNT">96</td>
-                    <td class="BUS_WIDTH">384</td>
-                    <td class="INF_C">96</td>
-                    <td class="VRAM">24</td>
-                    <td class="TBP">355</td>
+                    <td class="RADEON">7900 XTX</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #f22; width:calc(100%*96/96);"></div></div>96</td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #f22; width:calc(100%*384/384);"></div></div>384</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #f22; width:calc(100%*96/96);"></div></div>96</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #f22; width:calc(100%*24/24);"></div></div>24</td>
+                    <td class="TBP"><div class="guage"><div style="background: #f22; width:calc(100%*355/355);"></div></div>355</td>
                     <td class="MSRP">1000</td>
                     <td class="FAIR_PRICE">140000</td>
                     <td class="GEFORCE">RTX 4080</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6900 XT</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6900 XT</td>
+                    <td>→</td>
                     <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
                     <td class="GPU_CORE_2" style="background-color: #f88;">XT</td>
-                    <td class="RADEON">RX 7900 XT</td>
-                    <td class="CU_COUNT">84</td>
-                    <td class="BUS_WIDTH">320</td>
-                    <td class="INF_C">80</td>
-                    <td class="VRAM">20</td>
-                    <td class="TBP"><b>315</b></td>
+                    <td class="RADEON">7900 XT</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #f22; width:calc(100%*84/96);"></div></div>84</td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #f22; width:calc(100%*320/384);"></div></div>320</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #f22; width:calc(100%*80/96);"></div></div>80</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #f22; width:calc(100%*20/24);"></div></div>20</td>
+                    <td class="TBP"><div class="guage"><div style="background: #f22; width:calc(100%*315/355);"></div></div><b>315</b></td>
                     <td class="MSRP">900</td>
                     <td class="FAIR_PRICE">125000</td>
                     <td class="GEFORCE">RTX 4080</td>
                 </tr>
 
                 <tr>
-                    <td style="text-align: center;" colspan="99">ここまで発表済み</td>
-                </tr>
-            </table>
-            <br>
-            未発表（妄想）:<br>
-            <table>
-                <tr class="HEADER">
-                    <th class="PREDECESSOR"><small>置き換え対象の<br>先代モデル</small></th>
-                    <th class="PREDECESSOR">→</th>
-                    <th colspan="2">GPUコア</th>
-                    <th>Radeon</th>
-                    <th>CU</th>
-                    <th>バス幅</th>
-                    <th><small>Infinity<br>Cache</small></th>
-                    <th>VRAM</th>
-                    <th>TBP</th>
-                    <th><small>MSRP<br>(四捨五入)</small></th>
-                    <th><small>性能から見た<br>適正価格(税込)※</small></th>
-                    <th>競合GeForce</th>
+                    <td colspan="99"></td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6800 XT</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td colspan="99">▼未発表（妄想）</td>
+                </tr>
+
+                <tr>
+                    <td class="PREDECESSOR">6800 XT</td>
+                    <td>→</td>
                     <td class="GPU_CORE" style="background-color: #f88;">Navi 31</td>
                     <td class="GPU_CORE_2" style="background-color: #f88;">XL</td>
-                    <td class="RADEON">RX 7900 (無印)</td>
-                    <td class="CU_COUNT">72</td>
-                    <td class="BUS_WIDTH">320</td>
-                    <td class="INF_C">80</td>
-                    <td class="VRAM">20</td>
-                    <td class="TBP">300</td>
+                    <td class="RADEON">7900</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #f22; width:calc(100%*72/96);"></div></div>72</td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #f22; width:calc(100%*320/384);"></div></div>320</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #f22; width:calc(100%*80/96);"></div></div>80</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #f22; width:calc(100%*20/24);"></div></div>20</td>
+                    <td class="TBP"><div class="guage"><div style="background: #f22; width:calc(100%*300/355);"></div></div>300</td>
                     <td class="MSRP">750</td>
                     <td class="FAIR_PRICE">100000</td>
                     <td class="GEFORCE">RTX 4070 Ti</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6800 無印</td>
-                    <td class="PREDECESSOR">→</td>
-                    <td class="GPU_CORE" style="background-color: #ff8;" rowspan="2">Navi 32</td>
-                    <td class="GPU_CORE_2" style="background-color: #ff8;">XT</td>
-                    <td class="RADEON">RX 7800 XT</td>
-                    <td class="CU_COUNT">60</td>
-                    <td class="BUS_WIDTH">256</td>
-                    <td class="INF_C">64</td>
-                    <td class="VRAM">16</td>
-                    <td class="TBP">280</td>
+                    <td class="PREDECESSOR">6800</td>
+                    <td>→</td>
+                    <td class="GPU_CORE" style="background-color: #fc4;" rowspan="2">Navi 32</td>
+                    <td class="GPU_CORE_2" style="background-color: #fc4;">XT</td>
+                    <td class="RADEON">7800 XT</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #fc0; width:calc(100%*60/96);"></div></div>60</td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #fc0; width:calc(100%*256/384);"></div></div>256</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #fc0; width:calc(100%*64/96);"></div></div>64</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #fc0; width:calc(100%*16/24);"></div></div>16</td>
+                    <td class="TBP"><div class="guage"><div style="background: #fc0; width:calc(100%*280/355);"></div></div>280</td>
                     <td class="MSRP">600</td>
                     <td class="FAIR_PRICE">85000</td>
                     <td class="GEFORCE">RTX 4070 Ti</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6750/6700 XT</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6750/6700 XT</td>
+                    <td>→</td>
                     <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
-                    <td class="GPU_CORE_2" style="background-color: #ff8;">XL</td>
-                    <td class="RADEON">RX 7700 XT</td>
-                    <td class="CU_COUNT">48</td>
-                    <td class="BUS_WIDTH">192</td>
-                    <td class="INF_C">48</td>
-                    <td class="VRAM">12</td>
-                    <td class="TBP">225</td>
+                    <td class="GPU_CORE_2" style="background-color: #fc4;">XL</td>
+                    <td class="RADEON">7700 XT</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #fc0; width:calc(100%*48/96);"></div></div>48</td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #fc0; width:calc(100%*192/384);"></div></div>192</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #fc0; width:calc(100%*48/96);"></div></div>48</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #fc0; width:calc(100%*12/24);"></div></div>12</td>
+                    <td class="TBP"><div class="guage"><div style="background: #fc0; width:calc(100%*225/355);"></div></div>225</td>
                     <td class="MSRP">480</td>
                     <td class="FAIR_PRICE">68000</td>
                     <td class="GEFORCE">RTX 4070</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6700 無印</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6700</td>
+                    <td>→</td>
                     <td colspan="99">なし</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6650/6600 XT</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6650/6600 XT</td>
+                    <td>→</td>
                     <td class="GPU_CORE" style="background-color: #8f8;" rowspan="3">Navi 33</td>
                     <td class="GPU_CORE_2" style="background-color: #8f8;">XT</td>
-                    <td class="RADEON">RX 7600 XT</td>
-                    <td class="CU_COUNT">32</td>
-                    <td class="BUS_WIDTH">128</td>
-                    <td class="INF_C">32</td>
-                    <td class="VRAM">8</td>
-                    <td class="TBP">180</td>
+                    <td class="RADEON">7600 XT</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #0f0; width:calc(100%*32/96);"></div></div>32</td>
+                    <td class="BUS_WIDTH" rowspan="2"><div class="guage"><div style="background: #0f0; width:calc(100%*128/384);"></div></div>128</td>
+                    <td class="INF_C" rowspan="2"><div class="guage"><div style="background: #0f0; width:calc(100%*32/96);"></div></div>32</td>
+                    <td class="VRAM" rowspan="2"><div class="guage"><div style="background: #0f0; width:calc(100%*8/24);"></div></div>8</td>
+                    <td class="TBP"><div class="guage"><div style="background: #0f0; width:calc(100%*180/355);"></div></div>180</td>
                     <td class="MSRP">320</td>
                     <td class="FAIR_PRICE">44000</td>
                     <td class="GEFORCE">RTX 4060 Ti</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6600</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6600</td>
+                    <td>→</td>
                     <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
                     <td class="GPU_CORE_2" style="background-color: #8f8;">XL</td>
-                    <td class="RADEON">RX 7600</td>
-                    <td class="CU_COUNT">28</td>
-                    <td class="BUS_WIDTH">128</td>
-                    <td class="INF_C">32</td>
-                    <td class="VRAM">8</td>
-                    <td class="TBP">140</td>
+                    <td class="RADEON">7600</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #0f0; width:calc(100%*28/96);"></div></div>28</td>
+                    <!--<td class="BUS_WIDTH">縦結合(rowspan)設定中のため非表示</td>-->
+                    <!--<td class="INF_C">縦結合(rowspan)設定中のため非表示</td>-->
+                    <!--<td class="VRAM">縦結合(rowspan)設定中のため非表示</td>-->
+                    <td class="TBP"><div class="guage"><div style="background: #0f0; width:calc(100%*140/355);"></div></div>140</td>
                     <td class="MSRP">240</td>
                     <td class="FAIR_PRICE">33000</td>
                     <td class="GEFORCE">RTX 4060</td>
                 </tr>
 
                 <tr>
-                    <td class="PREDECESSOR">RX 6500 XT/6400</td>
-                    <td class="PREDECESSOR">→</td>
+                    <td class="PREDECESSOR">6500 XT/6400</td>
+                    <td>→</td>
                     <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
                     <td class="GPU_CORE_2" style="background-color: #8f8;">XE</td>
-                    <td class="RADEON">RX 7500</td>
-                    <td class="CU_COUNT">20～24</td>
-                    <td class="BUS_WIDTH">96</td>
-                    <td class="INF_C">24</td>
-                    <td class="VRAM">6</td>
-                    <td class="TBP">75～100</td>
+                    <td class="RADEON">7500</td>
+                    <td class="CU_COUNT"><div class="guage"><div style="background: #0f0; width:calc(100%*20/96);"></div></div><small>20～24</small></td>
+                    <td class="BUS_WIDTH"><div class="guage"><div style="background: #0f0; width:calc(100%*96/384);"></div></div>96</td>
+                    <td class="INF_C"><div class="guage"><div style="background: #0f0; width:calc(100%*24/96);"></div></div>24</td>
+                    <td class="VRAM"><div class="guage"><div style="background: #0f0; width:calc(100%*6/24);"></div></div>6</td>
+                    <td class="TBP"><div class="guage"><div style="background: #0f0; width:calc(100%*75/355);"></div></div>75～100</td>
                     <td class="MSRP">150</td>
                     <td class="FAIR_PRICE">20000</td>
-                    <td class="GEFORCE">RTX 4050(?)</td>
+                    <td class="GEFORCE">RTX 4050</td>
                 </tr>
             </table>
-            <br>
-            ※注釈<br>
-            適正価格: 1ドル=130円前後をベースとして計算<br>
         </span>
+        ※注釈<br>
+        適正価格: 1ドル=130円前後をベースに、消費税10%を加味して計算<br>
         <br>
 
         <h2 id="RX79">RX 7900 XTX & XT（発売済み）</h2>
@@ -249,83 +257,158 @@
         今回のAMDは柄にもなくガードが固く、RDNA 3およびRX 7000シリーズに関するリーク情報はとてつもなく少ない。<small>CPUであるRyzen 7000シリーズのリークはうじゃうじゃ出ていたのに、である。</small><br>
         具体的なラインナップがほとんど見えてこなかったり、CU数などの大まかなスペックもころころ変わったりと、とにかくリーカー泣かせだ。<small>急にどうしたAMD?</small><br>
         <br>
+        <details class="accordion-1">
+            <summary>過去の情報（クリックで開閉）</summary>
+            以下はRDNA 3の各チップについて、最大CU数に着目した噂の変遷である。上述の通り、内容が二転三転してしまっている。<small>中には発信元のツイートや、果てはアカウントごと消した人まで・・・</small><br>
+            また、当初は「CU」の概念がなくなって「WGP」に完全移行し（従来の2CU=1WGPで換算される）、1CUあたりのシェーダーコア数が64から128に増えると言われていたが、どちらも実現しなかった。<small>しかし1CUあたりに発行できる命令が2倍になったので、実質128で計算している人もいる。</small><br>
+            <span class="scroll">
+                <table class="GPU_timeline">
+                    <tr>
+                        <th>＼</th>
+                        <th style="background-color: #f88;">Navi 31</th>
+                        <th style="background-color: #ff8;">Navi 32</th>
+                        <th style="background-color: #8f8;">Navi 33</th>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-10727.html">2021年1月</a></td>
+                        <td>160 CU<small>(80×2)</small><br>チップレット</td>
+                        <td>?</td>
+                        <td>?</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-10750.html">2021年2月</a></td>
+                        <td>40 CU×? <small>or</small> 80 CU×?<br>チップレット</td>
+                        <td>? CU×?<br>チップレット</td>
+                        <td>↓</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11009.html">2021年7月</a></td>
+                        <td><b>240</b> CU<small>(120×2)</small><br>チップレット</td>
+                        <td>? CU×2<br>チップレット</td>
+                        <td>? CU<br>モノリシック</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11027.html">2021年8月</a></td>
+                        <td>120 CU<small>(60×2)</small><br>チップレット</td>
+                        <td>80 CU<small>(40×2)</small><br>チップレット</td>
+                        <td>40 CU<br>モノリシック</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11098.html">2021年9月</a></td>
+                        <td>↓</td>
+                        <td>↓</td>
+                        <td>32 CU<br>モノリシック</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11348.html">2022年5月 A</a></td>
+                        <td>96 CU<small>(48×2)</small><br>チップレット</td>
+                        <td>64 CU<small>(32×2)</small><br>チップレット</td>
+                        <td>32 CU<br>モノリシック</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11368.html">2022年5月 B</a></td>
+                        <td>96 CU<small>(<i>96×1</i>)</small><br>チップレット</td>
+                        <td>64 CU<small>(<i>64×1</i>)</small><br>チップレット</td>
+                        <td>↓</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://northwood.blog.fc2.com/blog-entry-11489.html">2022年8月</a></td>
+                        <td>96 CU<small>(<i>96×1</i>)</small><br>チップレット<br><small>84CUの下位モデルもある</small></td>
+                        <td>60 CU<small>(<i>60×1</i>)</small><br>チップレット</td>
+                        <td>32 CU<br>モノリシック</td>
+                    </tr>
+
+                </table>
+            </span>
+        </details>
+        <br>
         そんな状況の中、2023年2月に入ってRX 7800系以下の情報がようやく出現した。<br>
 
         <ul>
             <li>2月上旬: ラインナップの噂</li>
             <a href="https://northwood.blog.fc2.com/blog-entry-11733.html">日本語記事／北森瓦版</a>　<a href="https://gazlog.com/entry/rx7000series-whole-lineup-leak/">ギャズログ</a><br>
             YouTubeチャンネルのRedGamingTechが伝えたもので、以下のようなラインナップが予定されているという。
-            <table>
-                <tr class="HEADER">
-                    <th colspan="2">GPUコア</th>
-                    <th>Radeon</th>
-                    <th>CU</th>
-                    <th>バス幅</th>
-                    <th><small>Infinity<br>Cache</small></th>
-                    <th>VRAM</th>
-                    <th>TBP</th>
-                    <th>競合GeForce</th>
-                </tr>
+            <span class="scroll">
+                <table>
+                    <tr class="HEADER">
+                        <th colspan="2">GPUコア</th>
+                        <th>Radeon</th>
+                        <th>CU</th>
+                        <th>バス幅</th>
+                        <th><small>Infinity<br>Cache</small></th>
+                        <th>VRAM</th>
+                        <th>TBP</th>
+                        <th>競合GeForce</th>
+                    </tr>
+    
+                    <tr>
+                        <td class="GPU_CORE" style="background-color: #ff8;" rowspan="3">Navi 32</td>
+                        <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
+                        <td class="RADEON">7800 XT</td>
+                        <td class="CU_COUNT">60</td>
+                        <td class="BUS_WIDTH">256</td>
+                        <td class="INF_C">64</td>
+                        <td class="VRAM">16</td>
+                        <td class="TBP">280</td>
+                        <td class="GEFORCE">RTX 4070 Ti<small>より若干下</small></td>
+                    </tr>
+    
+                    <tr>
+                        <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
+                        <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
+                        <td class="RADEON">7800 (無印?)</td>
+                        <td class="CU_COUNT">54</td>
+                        <td colspan="99" style="background-color: #000; color: #f00;">このモデルの噂もあったがキャンセルされた</td>
+                    </tr>
+    
+                    <tr>
+                        <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
+                        <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
+                        <td class="RADEON">7700 XT</td>
+                        <td class="CU_COUNT">48</td>
+                        <td class="BUS_WIDTH">192</td>
+                        <td class="INF_C">48</td>
+                        <td class="VRAM">12</td>
+                        <td class="TBP">225</td>
+                        <td class="GEFORCE">RTX 4070 無印 (?)</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="GPU_CORE" style="background-color: #8f8;" rowspan="2">Navi 33</td>
+                        <td class="GPU_CORE_2" style="background-color: #8f8;">??</td>
+                        <td class="RADEON">7600 XT</td>
+                        <td class="CU_COUNT">32</td>
+                        <td class="BUS_WIDTH">128</td>
+                        <td class="INF_C">32</td>
+                        <td class="VRAM">8</td>
+                        <td class="TBP">180</td>
+                        <td class="GEFORCE">RTX 4060 Ti (?)</td>
+                    </tr>
+    
+                    <tr>
+                        <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
+                        <td class="GPU_CORE_2" style="background-color: #8f8;">??</td>
+                        <td class="RADEON">7600</td>
+                        <td class="CU_COUNT">28</td>
+                        <td class="BUS_WIDTH">128</td>
+                        <td class="INF_C">32</td>
+                        <td class="VRAM">8</td>
+                        <td class="TBP">140</td>
+                        <td class="GEFORCE">RTX 4060 無印 (?)</td>
+                    </tr>
+                </table>
+            </span>
+            
 
-                <tr>
-                    <td class="GPU_CORE" style="background-color: #ff8;" rowspan="3">Navi 32</td>
-                    <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
-                    <td class="RADEON">RX 7800 XT</td>
-                    <td class="CU_COUNT">60</td>
-                    <td class="BUS_WIDTH">256</td>
-                    <td class="INF_C">64</td>
-                    <td class="VRAM">16</td>
-                    <td class="TBP">280</td>
-                    <td class="GEFORCE">RTX 4070 Ti<small>より若干下</small></td>
-                </tr>
-
-                <tr>
-                    <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
-                    <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
-                    <td class="RADEON">RX 7800 (無印?)</td>
-                    <td class="CU_COUNT">54</td>
-                    <td colspan="99" style="background-color: #000; color: #f00;">このモデルの噂もあったがキャンセルされた</td>
-                </tr>
-
-                <tr>
-                    <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
-                    <td class="GPU_CORE_2" style="background-color: #ff8;">??</td>
-                    <td class="RADEON">RX 7700 XT</td>
-                    <td class="CU_COUNT">48</td>
-                    <td class="BUS_WIDTH">192</td>
-                    <td class="INF_C">48</td>
-                    <td class="VRAM">12</td>
-                    <td class="TBP">225</td>
-                    <td class="GEFORCE">RTX 4070 無印 (?)</td>
-                </tr>
-
-                <tr>
-                    <td class="GPU_CORE" style="background-color: #8f8;" rowspan="2">Navi 33</td>
-                    <td class="GPU_CORE_2" style="background-color: #8f8;">??</td>
-                    <td class="RADEON">RX 7600 XT</td>
-                    <td class="CU_COUNT">32</td>
-                    <td class="BUS_WIDTH">128</td>
-                    <td class="INF_C">32</td>
-                    <td class="VRAM">8</td>
-                    <td class="TBP">180</td>
-                    <td class="GEFORCE">RTX 4060 Ti (?)</td>
-                </tr>
-
-                <tr>
-                    <!--<td class="GPU_CORE">縦結合(rowspan)設定中のため非表示</td>-->
-                    <td class="GPU_CORE_2" style="background-color: #8f8;">??</td>
-                    <td class="RADEON">RX 7600</td>
-                    <td class="CU_COUNT">28</td>
-                    <td class="BUS_WIDTH">128</td>
-                    <td class="INF_C">32</td>
-                    <td class="VRAM">8</td>
-                    <td class="TBP">140</td>
-                    <td class="GEFORCE">RTX 4060 無印 (?)</td>
-                </tr>
-            </table>
-
-            個人的には、下位モデルになるほど前世代RX 6000シリーズからのスペックの伸び幅が低くなっているのが残念に感じる。<br>
-            せめて7600 XTはVRAM 10GBにできなかったものか。<br>
+            個人的には、下位モデルになるほど前世代RX 6000シリーズからのスペックの伸び幅が低くなっているのが残念に感じる。せめて7600 XTはVRAM 10GBにできなかったものか。<br>
             <br>
             しかし、良いニュースだけではなく悪いニュースもついてきてしまった・・・<br>
             <br>
@@ -352,39 +435,47 @@
         注目すべきポイントとして、Intelがメモリ6GBでTBP 75Wなエントリーモデル（Arc A380）を投入していることが挙げられる。<br>
         AMDがその対抗として、Navi 33をさらにカットダウンしたモデルを投入する可能性に、個人的には賭けてみたい。（冒頭の表を参照）<br>
 
-        
-        
-        
+
         <!--<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
         <script>
+            let class_PREDECESSOR = document.querySelectorAll("td.PREDECESSOR");
+            for (let i = 0; i < class_PREDECESSOR.length; i++) {
+                class_PREDECESSOR[i].insertAdjacentHTML('afterbegin', '<small>RX </small>');
+            }
+
+            let class_RADEON = document.querySelectorAll(".RADEON");
+            for (let i = 0; i < class_RADEON.length; i++) {
+                class_RADEON[i].insertAdjacentHTML('afterbegin', '<small>RX </small>');
+            }
+
             let class_BUS_WIDTH = document.getElementsByClassName("BUS_WIDTH");
             for (let i = 0; i < class_BUS_WIDTH.length; i++) {
-                class_BUS_WIDTH[i].insertAdjacentHTML('beforeend', '<small>-bit</small>');
+                class_BUS_WIDTH[i].insertAdjacentHTML('beforeend', '<small> bit</small>');
             }
 
             let class_INF_C = document.getElementsByClassName("INF_C");
             for (let i = 0; i < class_INF_C.length; i++) {
-                class_INF_C[i].insertAdjacentHTML('beforeend', '<small>MB</small>');
+                class_INF_C[i].insertAdjacentHTML('beforeend', '<small> MB</small>');
             }
 
             let class_VRAM = document.getElementsByClassName("VRAM");
             for (let i = 0; i < class_VRAM.length; i++) {
-                class_VRAM[i].insertAdjacentHTML('beforeend', '<small>GB</small>');
+                class_VRAM[i].insertAdjacentHTML('beforeend', '<small> GB</small>');
             }
 
             let class_TBP = document.getElementsByClassName("TBP");
             for (let i = 0; i < class_TBP.length; i++) {
-                class_TBP[i].insertAdjacentHTML('beforeend', '<small>W</small>');
+                class_TBP[i].insertAdjacentHTML('beforeend', '<small> W</small>');
             }
 
             let class_MSRP = document.getElementsByClassName("MSRP");
             for (let i = 0; i < class_MSRP.length; i++) {
-                class_MSRP[i].insertAdjacentHTML('afterbegin', '<small>$</small>');
+                class_MSRP[i].insertAdjacentHTML('afterbegin', '<small>$ </small>');
             }
 
             let class_FAIR_PRICE = document.getElementsByClassName("FAIR_PRICE");
             for (let i = 0; i < class_FAIR_PRICE.length; i++) {
-                class_FAIR_PRICE[i].insertAdjacentHTML('beforeend', '<small>円</small>');
+                class_FAIR_PRICE[i].insertAdjacentHTML('beforeend', '<small> 円</small>');
             }
         </script>
     </body>
