@@ -223,7 +223,7 @@ LTO_ENABLE = yes
 ----
 
 ## あとはコンパイルと書き込み
-QMK MSYSとかで→ `$ qmk compile -kb keychron/c3_pro_8k/ansi -km MY_MAPPING`
+コンパイルはQMK MSYSとかで→ `$ qmk compile -kb keychron/c3_pro_8k/ansi -km MY_MAPPING`
 
 書き込みにはQMK Toolboxを……と言いたいところだが、**どういうわけかブートローダーに入ってもQMK Toolbox内で認識されない**（黄色文字が出ない）  
 そこで解決策として（Windowsの場合）、
